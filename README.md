@@ -5,7 +5,7 @@ Diffusion Studio core is perfect for these use cases.
 
 In this tutorial, I will give you a quick introduction into how you can use the Diffusion Studio Core to programmatically generate your own videos.
 
-## Prerequisits
+## Prerequisites
 
 Diffusion Studio Core is a Javascript package that needs to be run in the browser such that it has access to the browser APIs.
 Therefore, we need to first create a simple website to run Javascript in. For simplicity, I use `vite` to set this up.
@@ -34,7 +34,7 @@ const composition = new Composition();
 
 const text = new TextClip('Hello World');
 
-await composition.appendClip(text);
+await composition.add(text);
 
 await new WebcodecsEncoder(composition).export();
 ```
@@ -101,7 +101,7 @@ player.style.transformOrigin = 'center';
 
 composition.play();
 ```
-If you relaod the scene, you will now see the player on the screen with the hello world text.
+If you reload the scene, you will now see the player on the screen with the hello world text.
 
 ## Animation
 So far, we have only added a static text, and nothing has been animated yet. So, let's add a simple animation.
@@ -135,4 +135,4 @@ rotation: new Keyframe(
     {type: 'degrees'}
 )
 ```
-Now you can see that you can add as many values to the keyframe as you like, as long as the lenght of the frame array is the same as the value array. You might notice that the rotation looks a little off. It seems like the rotation anchor is at the tip of the W. This is because of the position attributes. To fix this we need to set the position as center (`position: 'center'`). That will set the anchor of the rotation to the center of the phrase and make the rotation seem more normal.
+Now you can see that you can add as many values to the keyframe as you like, as long as the length of the frame array is the same as the value array. You might notice that the rotation looks a little off. It seems like the rotation anchor is at the tip of the W. This is because of the position attributes. To fix this we need to set the position as center (`position: 'center'`). That will set the anchor of the rotation to the center of the phrase and make the rotation seem more normal.
