@@ -25,7 +25,7 @@ const text = new TextClip({
 });
 
 
-await composition.appendClip(text);
+await composition.add(text);
 
 const container = document.getElementById('player-container') as HTMLDivElement;
 const player = document.getElementById('player') as HTMLDivElement;

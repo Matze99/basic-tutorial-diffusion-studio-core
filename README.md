@@ -46,7 +46,7 @@ import { TextClip, Composition, WebcodecsEncoder } from '@diffusionstudio/core';
 const composition = new Composition(); ①
 
 const text = new TextClip('Hello World');
-await composition.appendClip(text); ②
+await composition.add(text); ②
 
 await new WebcodecsEncoder(composition).export(); ③
 ```
