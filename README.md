@@ -132,7 +132,6 @@ The keyframe can be applied to position, translation, rotation, and opacity (to 
 rotation: new Keyframe(
     [100, 200, 201, 300],
     [0, 3600, 0, 360],
-    {type: 'degrees'}
 )
 ```
 Now you can see that you can add as many values to the keyframe as you like, as long as the length of the frame array is the same as the value array. You might notice that the rotation looks a little off. It seems like the rotation anchor is at the tip of the W. This is because of the position attributes. To fix this we need to set the position as center (`position: 'center'`). That will set the anchor of the rotation to the center of the phrase and make the rotation seem more normal.

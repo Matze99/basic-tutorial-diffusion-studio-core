@@ -20,7 +20,6 @@ const text = new TextClip({
     rotation: new Keyframe(
         [100, 200, 201, 300],
         [0, 3600, 0, 360],
-        {type: 'degrees'}
     )
 });
 
